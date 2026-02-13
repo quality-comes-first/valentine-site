@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Forever ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+  <!-- 💌 WELCOME PAGE -->
+  <div class="card glass" id="welcomeCard">
+    <h1>Happy Valentine’s Day, My Love ❤️</h1>
+    <p class="wrap-text">
+      Today isn’t just another day…  
+      It’s a celebration of us.  
+      Of laughs, fights, drama, and forever. 💖
+    </p>
+    <button class="primary-btn" onclick="startTrivia()">Start Our Story 💘</button>
+  </div>
+
+  <!-- 🎯 QUESTION CARD -->
+  <div class="card glass hidden" id="questionCard">
+    <h2 id="questionText" class="wrap-text"></h2>
+    <div id="optionsContainer"></div>
+  </div>
+
+  <!-- ✨ REVEAL CARD -->
+  <div class="card glass hidden" id="revealCard">
+    <h2 id="revealText" class="wrap-text"></h2>
+    <button class="primary-btn" onclick="nextQuestion()">Continue ❤️</button>
+  </div>
+
+  <!-- 💌 FINAL ENVELOPE -->
+  <div class="hidden" id="finalSection">
+    <div class="envelope" onclick="openEnvelope()">
+      <div class="letter">
+        <img src="assets/your-image.jpg" alt="Us ❤️">
+        <h2>Happy Valentine's Day ❤️</h2>
+      </div>
+    </div>
+    <audio id="loveSong" src="assets/yoursong.mp3"></audio>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

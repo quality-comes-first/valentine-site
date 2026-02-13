@@ -1,0 +1,209 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Serif Display', serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ===== PREMIUM ANIMATED VALENTINE BACKGROUND ===== */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, #ff4e8a, transparent 40%),
+              radial-gradient(circle at 80% 70%, #ff6ec7, transparent 40%),
+              linear-gradient(135deg, #ff758c, #ff7eb3);
+  animation: bgMove 12s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+@keyframes bgMove {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+  100% {
+    filter: hue-rotate(15deg);
+    transform: scale(1.05);
+  }
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== REAL GLASS POPUP ===== */
+.glass {
+  width: 100%;
+  max-width: 520px;
+  padding: 45px 35px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(35px) saturate(180%);
+  -webkit-backdrop-filter: blur(35px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    inset 0 0 25px rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+  animation: cardPop 0.6s ease;
+}
+
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ===== TEXT WRAP ===== */
+h1, h2, p {
+  line-height: 1.6;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'DM Serif Display', serif;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #ff4e8a, #ff6ec7);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 78, 138, 0.6);
+}
+
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* ===== HIDDEN ===== */
+.hidden {
+  display: none;
+}
+
+/* ===== ENVELOPE ===== */
+.envelope {
+  width: 260px;
+  height: 160px;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.6s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.envelope:before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-bottom: 80px solid #ffffff;
+}
+
+.letter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 12px;
+  transform: translateY(110%);
+  transition: 0.7s ease;
+}
+
+.letter img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.envelope.open .letter {
+  transform: translateY(0);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .glass {
+    padding: 35px 25px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* ===== SPECIAL DATE STYLING ===== */
+.special-date {
+  display: block;
+  margin-top: 15px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 38px;
+  letter-spacing: 2px;
+  position: relative;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #ffe6f2,
+    #ffffff,
+    #fff0f8
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: glitter 3s linear infinite;
+  text-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+@keyframes glitter {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
