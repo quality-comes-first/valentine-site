@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Forever ❤️</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>My Forever ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 <div class="background"></div>
 
 <div class="container">
+
   <div class="glass final-page">
 
     <h1>Happy Valentine's Day ❤️</h1>
 
-    <div class="gallery">
-      <img src="assets/your-image1.jpg" alt="Memory 1">
-      <img src="assets/your-image2.jpg" alt="Memory 2">
-      <img src="assets/your-image3.jpg" alt="Memory 3">
+    <!-- SLIDESHOW -->
+    <div class="slideshow">
+      <img src="assets/ourpic1.png" class="slide active">
+      <img src="assets/ourpic2.JPG" class="slide">
+      <img src="assets/ourpic3.png" class="slide">
+      <img src="assets/ourpic4.JPG" class="slide">
     </div>
 
-    <p class="final-message">
-      You are my home.  
-      My safe place.  
-      My always.  
-      My forever. ❤️
+    <!-- PARAGRAPH -->
+    <p class="love-text">
+      From the moment you walked into my life,
+      everything became softer, brighter, warmer.
+      You are my calm in chaos, my smile in silence,
+      my strength when I feel weak.
+      No matter where life takes us,
+      I only want to walk it with you. ❤️
     </p>
 
   </div>
 
-  <audio autoplay loop>
-    <source src="assets/yoursong.mp3" type="audio/mp3">
-  </audio>
-
 </div>
+
+<!-- SONG -->
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/yourejustperfect.mp3" type="audio/mp3">
+</audio>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3000);
+</script>
 
 </body>
 </html>
