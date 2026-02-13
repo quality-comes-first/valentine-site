@@ -1,12 +1,12 @@
 const questions = [
   {
     question: "1️⃣ What was our anniversary date?",
-    options: ["March 14 2017", "January 1 2015", "Don’t know 😅"],
+    options: ["July 1 2001", "May 25 2001", "Don’t know 😅"],
     reveal: "Just kidding 😘✨ <span class='special-date'>APRIL 23, 2016</span> ✨"
   },
   {
     question: "2️⃣ Who proposed first? 😏",
-    options: ["Sandhini S.", "Sandhini Sai", "Sandhini"],
+    options: ["S. Sandhini", "Sai Sandhini", "Shandhini"],
     reveal: "Don’t get angry 😅 I’m the one who proposed you first 💘"
   },
   {
@@ -16,7 +16,7 @@ const questions = [
   },
   {
     question: "4️⃣ What is my biggest weakness?",
-    options: ["Chocolate 🍫", "Sleep 😴", "You 💘"],
+    options: ["Anger 😏", "You being mad at me 😬", "You 💘"],
     special: true
   },
   {
